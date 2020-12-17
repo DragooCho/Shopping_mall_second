@@ -19,7 +19,7 @@ function FileUpload() {
             {...getRootProps()}
           >
             <input {...getInputProps()} />
-            <Icon type="plus" style={{ fontSize: "3rem" }} />
+            <Icon type="plus" style={{ fontSize: "4rem" }} />
           </div>
         )}
       </Dropzone>
