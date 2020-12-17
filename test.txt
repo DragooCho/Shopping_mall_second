@@ -1,0 +1,81 @@
+rsf
+일반적인 함수 컴포넌트 생성
+
+현재는
+http://localhost:3000/
+로 로컬 진입
+
+npm install은 'client 디렉토리'와 '전역' 두가지를 해야 된다.
+
+git fetch
+패치하면 원격 저장소의 최신 업데이트 내용을 로컬에 가져올 수 있다.
+가져온 변경사항을 현재 브랜치와 머지하려면 pull 명령어를 사용한다.
+
+git pull origin master
+원격 저장소의 변경 내용을 가져와 로컬 저장소에 반영된다. 패스트 포워드가 가능하면 바로 반영하고 그렇지 않으면 머지 커밋을 추가로 만든다.
+
+내가 작업한 내용을 깨끗히 유지하고 싶으면 머지 커밋을 만들지 않고 리베이스로 변경사항을 반영할 수도 있다.
+
+git pull origin maseter --rebase
+이렇게 하면 원격저장소에 있는 변경사항을 먼저 쌓고 그 위에 내가 작업한 변경사항을 쌓는 방식이다.
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/DragooCho/Shopping_mall_site_production.git
+git push -u origin main
+
+git add .
+git commit -m "onChange Event add"
+git push -u origin main
+
+
+좋은 css 프레임워크 Ant Design, antd 사용
+https://programming119.tistory.com/168
+
+
+여러 버전의 Node.js를 설치했다면 마찬가지로 nvm use를 사용해 버전을 변경할 수 있습니다. 
+하지만 새로운 쉘을 실행하거나 다시 띄우게 되면 
+node의 버번이 시스템 버전으로 변경되어 있는데요. 
+이를 고정하기 위해서 아래와 같이 해줍니다.
+
+nvm alias default 10.16.0   
+
+
+깃허브 pull 충돌 에러
+Please commit your changes or stash them before you merge.
+
+
+
+git pull [ 레파짓 주소 ]
+
+git stash
+
+내가 수정한 소스를 저장하고 이전 커밋 시점으로 되돌린다.
+
+git pull [ 레파짓 주소 ]
+
+다시 깃에서 소스를 내려받는다.
+
+git stash pop
+
+내가 수정한 소스와 내려받은 소스가 merge 된다. 
+
+소스 수정
+
+git commit -m ""
+
+커밋
+
+git push origin master
+
+
+
+ 
+lsof -i :5000    
+
+kill -9 28635  
+
+npm install bcrypt@5.0.0 --save
+npm install antd@3.24.1 --save 
