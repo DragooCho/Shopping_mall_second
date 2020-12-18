@@ -1,7 +1,6 @@
 import React from "react";
 import Dropzone from "react-dropzone";
 import { Icon } from "antd";
-import exios from "axios";
 import Axios from "axios";
 
 function FileUpload() {
@@ -12,7 +11,7 @@ function FileUpload() {
     };
     formData.append("file", files[0]);
 
-    axios.post("/api/product/image", formData, config).then((response) => {
+    Axios.post("/api/product/image", formData, config).then((response) => {
       if (response.data.success) {
       } else {
         alert("파일을 저장하는데 실패했습니다.");
