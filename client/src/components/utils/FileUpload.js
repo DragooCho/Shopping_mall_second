@@ -40,7 +40,11 @@ function FileUpload() {
             <input {...getInputProps()} />
             <Icon
               type="plus"
-              style={{ fontSize: "4rem", position: "relative", top: "30px" }}
+              style={{
+                fontSize: "4rem",
+                position: "relative",
+                top: "30px",
+              }}
             />
             <p style={{ position: "relative", top: "30px" }}>
               이미지를 여기에 끌어 가지고 오세요!!!
