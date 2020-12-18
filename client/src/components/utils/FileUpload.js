@@ -2,6 +2,7 @@ import React from "react";
 import Dropzone from "react-dropzone";
 import { Icon } from "antd";
 import Axios from "axios";
+import Column from "antd/lib/table/Column";
 
 function FileUpload() {
   const dropHandler = (files) => {
@@ -27,15 +28,23 @@ function FileUpload() {
             style={{
               width: 300,
               height: 240,
-              border: "1px solid lightgray",
+              border: "3px solid lightgray",
+              borderRadius: "10px",
               display: "flex",
               alignItems: "center",
-              justifyContent: "center",
+              justifyContent: "space-evenly",
+              flexDirection: "column",
             }}
             {...getRootProps()}
           >
             <input {...getInputProps()} />
-            <Icon type="plus" style={{ fontSize: "4rem" }} />
+            <Icon
+              type="plus"
+              style={{ fontSize: "4rem", position: "relative", top: "30px" }}
+            />
+            <p style={{ position: "relative", top: "30px" }}>
+              이미지를 여기에 끌어 가지고 오세요!!!
+            </p>
           </div>
         )}
       </Dropzone>
