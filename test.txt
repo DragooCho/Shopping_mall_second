@@ -27,7 +27,7 @@ git remote add origin https://github.com/DragooCho/Shopping_mall_site_production
 git push -u origin main
 
 git add .
-git commit -m "onChange Event add"
+git commit -m "이미지 파일을 서버로 보내기"
 git push -u origin main
 
 
