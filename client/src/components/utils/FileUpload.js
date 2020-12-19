@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Dropzone from "react-dropzone";
-import { Icon } from "antd";
+import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import axios from "axios";
 import Column from "antd/lib/table/Column";
 
@@ -27,7 +27,7 @@ function FileUpload() {
     const currentIndex = Images.indexOf(image);
     console.log("currentIndex", currentIndex);
     let newImages = [...Images];
-    newImages.slice(currentIndex, 1);
+    newImages.splice(currentIndex, 1);
     setImages(newImages);
   };
 
@@ -39,7 +39,7 @@ function FileUpload() {
             style={{
               width: 300,
               height: 240,
-              border: "3px solid lightgray",
+              border: "1px solid lightgray",
               borderRadius: "10px",
               display: "flex",
               alignItems: "center",
@@ -49,10 +49,10 @@ function FileUpload() {
             {...getRootProps()}
           >
             <input {...getInputProps()} />
-            <Icon
+            <EditOutlined
               type="plus"
               style={{
-                fontSize: "4rem",
+                fontSize: "3rem",
                 position: "relative",
                 top: "30px",
               }}
