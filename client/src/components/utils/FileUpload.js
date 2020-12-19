@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Dropzone from "react-dropzone";
 import { Icon } from "antd";
-import Axios from "axios";
+import axios from "axios";
 import Column from "antd/lib/table/Column";
 
 function FileUpload() {
@@ -14,13 +14,21 @@ function FileUpload() {
     };
     formData.append("file", files[0]);
 
-    Axios.post("/api/product/image", formData, config).then((response) => {
+    axios.post("/api/product/image", formData, config).then((response) => {
       if (response.data.success) {
         setImages([...Images, response.data.filePath]);
       } else {
         alert("파일을 저장하는데 실패했습니다.");
       }
     });
+  };
+
+  const deleteHandler = (image) => {
+    const currentIndex = Images.indexOf(image);
+    console.log("currentIndex", currentIndex);
+    let newImages = [...Images];
+    newImages.slice(currentIndex, 1);
+    setImages(newImages);
   };
 
   return (
@@ -64,7 +72,7 @@ function FileUpload() {
         }}
       >
         {Images.map((image, index) => (
-          <div key={index}>
+          <div onClick={() => deleteHandler(image)} key={index}>
             <img
               style={{ minWidth: "300px", width: "300px", height: "240px" }}
               src={`http://localhost:5000/${image}`}
