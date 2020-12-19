@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Dropzone from "react-dropzone";
-import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import { PlusOutlined } from "@ant-design/icons";
 import axios from "axios";
 import Column from "antd/lib/table/Column";
 
@@ -49,7 +49,7 @@ function FileUpload() {
             {...getRootProps()}
           >
             <input {...getInputProps()} />
-            <EditOutlined
+            <PlusOutlined
               type="plus"
               style={{
                 fontSize: "3rem",
