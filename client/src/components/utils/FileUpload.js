@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Dropzone from "react-dropzone";
 import { PlusOutlined } from "@ant-design/icons";
 import axios from "axios";
-import Column from "antd/lib/table/Column";
 
 function FileUpload(props) {
   const [Images, setImages] = useState([]);
@@ -26,7 +25,6 @@ function FileUpload(props) {
 
   const deleteHandler = (image) => {
     const currentIndex = Images.indexOf(image);
-    console.log("currentIndex", currentIndex);
     let newImages = [...Images];
     newImages.splice(currentIndex, 1);
     setImages(newImages);
@@ -77,7 +75,8 @@ function FileUpload(props) {
           <div onClick={() => deleteHandler(image)} key={index}>
             <img
               style={{ minWidth: "300px", width: "300px", height: "240px" }}
-              src={`http://localhost:5000/${image}`}
+              // src={`http://localhost:5000/${image}`}
+              src={`http://localhost:5000/${image.filePath}`}
             />
           </div>
         ))}

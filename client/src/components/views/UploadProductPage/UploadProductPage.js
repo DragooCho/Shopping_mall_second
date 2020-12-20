@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Typography, Button, Form, Input } from "antd";
+import { Button, Form, Input } from "antd";
 import FileUpload from "../../utils/FileUpload";
 
 const { TextArea } = Input;
@@ -14,7 +14,7 @@ const Continents = [
   { key: 7, value: "Antarctica" },
 ];
 
-function UploadProductPage(props) {
+function UploadProductPage() {
   const [Title, setTitle] = useState("");
   const [Description, setDescription] = useState("");
   const [Price, setPrice] = useState(0);
