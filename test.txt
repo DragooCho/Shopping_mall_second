@@ -27,7 +27,7 @@ git remote add origin https://github.com/DragooCho/Shopping_mall_site_production
 git push -u origin main
 
 git add .
-git commit -m "이미지 State을 부모 컴포넌트로 업데이트하기"
+git commit -m "모든 상품 정보를 데이터베이스에 저장하기"
 git push -u origin main
 
 
