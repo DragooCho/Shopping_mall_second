@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Dropzone from "react-dropzone";
-import { PlusOutlined } from "@ant-design/icons";
+import { Icon } from "antd";
 import axios from "axios";
 
 function FileUpload(props) {
@@ -49,7 +49,7 @@ function FileUpload(props) {
             {...getRootProps()}
           >
             <input {...getInputProps()} />
-            <PlusOutlined
+            <Icon
               type="plus"
               style={{
                 fontSize: "3rem",
@@ -75,8 +75,8 @@ function FileUpload(props) {
           <div onClick={() => deleteHandler(image)} key={index}>
             <img
               style={{ minWidth: "300px", width: "300px", height: "240px" }}
-              // src={`http://localhost:5000/${image}`}
-              src={`http://localhost:5000/${image.filePath}`}
+              src={`http://localhost:5000/${image}`}
+              // src={`http://localhost:5000/${image.filePath}`}
             />
           </div>
         ))}
