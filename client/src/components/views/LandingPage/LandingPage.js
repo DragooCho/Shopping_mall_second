@@ -48,8 +48,6 @@ function LandingPage() {
   };
 
   const renderCards = Products.map((product, index) => {
-    console.log("product", product);
-
     return (
       <Col lg={6} md={8} xs={24} key={index}>
         <Card cover={<ImageSlider images={product.images} />}>
@@ -59,6 +57,8 @@ function LandingPage() {
       </Col>
     );
   });
+
+  console.log(PostSize);
 
   return (
     <div style={{ width: "75%", margin: "3rem auto" }}>
