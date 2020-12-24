@@ -4,14 +4,24 @@ import FileUpload from "../../utils/FileUpload";
 import Axios from "axios";
 const { TextArea } = Input;
 
+// const Continents = [
+//   { key: 1, value: "Africa" },
+//   { key: 2, value: "Europe" },
+//   { key: 3, value: "Asia" },
+//   { key: 4, value: "South America" },
+//   { key: 5, value: "North America" },
+//   { key: 6, value: "Australia" },
+//   { key: 7, value: "Antarctica" },
+// ];
+
 const Continents = [
-  { key: 1, value: "Africa" },
-  { key: 2, value: "Europe" },
-  { key: 3, value: "Asia" },
-  { key: 4, value: "South America" },
-  { key: 5, value: "North America" },
-  { key: 6, value: "Australia" },
-  { key: 7, value: "Antarctica" },
+  { key: 1, value: "개" },
+  { key: 2, value: "고양이" },
+  { key: 3, value: "너구리과" },
+  { key: 4, value: "새" },
+  { key: 5, value: "소" },
+  { key: 6, value: "쥐" },
+  { key: 7, value: "기타 동물" },
 ];
 
 function UploadProductPage(props) {
