@@ -118,6 +118,7 @@ function LandingPage() {
             onClick={loadMoreHandler}
             size="large"
             type="primary"
+            shape="round"
             block
           >
             더보기
