@@ -27,7 +27,7 @@ git remote add origin https://github.com/DragooCho/Shopping_mall_site_production
 git push -u origin main
 
 git add .
-git commit -m "라디오 박스 필터 만들기 #1"
+git commit -m "라디오 박스 필터 만들기 #2"
 git push -u origin main
 
 
