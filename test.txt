@@ -70,6 +70,8 @@ git commit -m ""
 
 git push origin master
 
+git push -f  
+
 
 
  
@@ -79,3 +81,5 @@ kill -9 28635
 
 npm install bcrypt@5.0.0 --save
 npm install antd@3.24.1 --save 
+
+ 
