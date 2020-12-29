@@ -13,13 +13,17 @@ function ProductInfo(props) {
 
   return (
     <div>
-      <Descriptions title="Product Info" bordered>
-        <Descriptions.Item label="Price">
-          {props.detail.price}
+      <Descriptions title="생성 정보" bordered>
+        <Descriptions.Item label="가격">
+          {props.detail.price} $(달러)
         </Descriptions.Item>
-        <Descriptions.Item label="Sold">{props.detail.sold}</Descriptions.Item>
-        <Descriptions.Item label="View">{props.detail.view}</Descriptions.Item>
-        <Descriptions.Item label="Description">
+        <Descriptions.Item label="판매 수량">
+          {props.detail.sold}
+        </Descriptions.Item>
+        <Descriptions.Item label="조회 수">
+          {props.detail.view}
+        </Descriptions.Item>
+        <Descriptions.Item label="상품 설명">
           {props.detail.description}
         </Descriptions.Item>
       </Descriptions>
@@ -34,7 +38,7 @@ function ProductInfo(props) {
       >
         {" "}
         <Button size="large" shape="round" type="danger" onClick={clickHandler}>
-          Add to Cart
+          장바구니에 추가
         </Button>
       </div>
     </div>
