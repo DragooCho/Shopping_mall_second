@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaCode } from "react-icons/fa";
+
 import Axios from "axios";
 import { Icon, Col, Card, Row, Button, Avatar } from "antd";
 import Meta from "antd/lib/card/Meta";
@@ -8,7 +8,6 @@ import CheckBox from "./Sections/CheckBox";
 import RadioBox from "./Sections/RadioBox";
 import SearchFeature from "./Sections/SearchFeature";
 import { continents, price } from "./Sections/Datas";
-import { updateLocale } from "moment";
 
 function LandingPage() {
   const [Products, setProducts] = useState([]);
@@ -68,7 +67,7 @@ function LandingPage() {
           }
         >
           <Meta title={product.title} description={`$${product.price}`} />
-          <Meta description={product.description} />
+          {/* <Meta description={product.description} /> */}
         </Card>
       </Col>
     );
