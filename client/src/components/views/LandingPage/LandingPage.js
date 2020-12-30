@@ -130,19 +130,15 @@ function LandingPage() {
   return (
     <div style={{ width: "75%", margin: "3rem auto" }}>
       <div style={{ textAlign: "center" }}>
-        <h2>
-          Let's Travel Anywhere{" "}
+        <h2 style={{ fontFamily: "Noto Sans KR" }}>
           <Avatar
-            style={{ backgroundColor: "#ffffff" }}
+            style={{ margin: "10px" }}
             src="https://www.flaticon.com/svg/static/icons/svg/64/64365.svg"
           />
+          귀여운 동물사진!!! 여기에서 구하세요!!!{" "}
           <Avatar
-            style={{ backgroundColor: "#ffffff" }}
+            style={{ margin: "10px" }}
             src="https://img.favpng.com/12/14/21/cat-scalable-vector-graphics-png-favpng-fja28NMeQcyvcmKwcmG3PkEiK.jpg"
-          />
-          <Avatar
-            style={{ backgroundColor: "#ffffff" }}
-            src="https://www.pinclipart.com/picdir/big/3-32000_clip-black-and-white-stock-coyote-clipart-shadow.png"
           />
         </h2>
       </div>
