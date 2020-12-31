@@ -37,7 +37,7 @@ function CheckBox(props) {
     ));
 
   return (
-    <div>
+    <div className="cardRadius">
       <Collapse defaultActiveKey={["1"]}>
         <Panel header="동물 분류 체크" key="1">
           {renderCheckboxLists()}
