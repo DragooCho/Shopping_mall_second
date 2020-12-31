@@ -103,15 +103,24 @@ router.post("/products", (req, res) => {
 
 router.get("/products_by_id", (req, res) => {
   let type = req.query.type;
-  let productId = req.query.id;
+  let productIds = req.query.id;
+
+  if (type === "array") {
+    // id=123422141423,1254312515,15153 이거를
+    // productIds =['133333345334', '3456344376347', '235346346'] 이런식으로 바꿔주기
+    let ids = req.query.id.split(",");
+    productIds = ids.map((item) => {
+      return item;
+    });
+  }
 
   // productId를 이용해서 DB에서 productId와 같은 상품정보를 가져온다.
 
-  Product.find({ _id: productId })
+  Product.find({ _id: { $in: productIds } })
     .populate("writer")
     .exec((err, product) => {
       if (err) return res.status(400).send(err);
-      return res.status(200).send({ success: true, product });
+      return res.status(200).json({ success: true, product });
     });
 });
 
