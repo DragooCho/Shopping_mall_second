@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { getCartItems, removeCartItem } from "../../../_actions/user_actions";
 import UserCardBlock from "./Sections/UserCardBlock";
+import { Empty } from "antd";
 
 function CartPage(props) {
   const dispatch = useDispatch();
 
   const [Total, setTotal] = useState(0);
+  const [ShowTotal, setShowTotal] = useState();
 
   useEffect(() => {
     let cartItems = [];
@@ -34,10 +36,15 @@ function CartPage(props) {
     });
 
     setTotal(total);
+    setShowTotal(true);
   };
 
   let removeFromCart = (productId) => {
-    dispatch(removeCartItem(productId)).then((response) => {});
+    dispatch(removeCartItem(productId)).then((response) => {
+      if (response.payload.productInfo.length <= 0) {
+        setShowTotal(false);
+      }
+    });
   };
 
   return (
@@ -50,9 +57,16 @@ function CartPage(props) {
         />
       </div>
 
-      <div style={{ marginTop: "3rem" }}>
-        <h2>Total Amount: ${Total}</h2>
-      </div>
+      {ShowTotal ? (
+        <div style={{ marginTop: "3rem" }}>
+          <h2>Total Amount: ${Total}</h2>
+        </div>
+      ) : (
+        <>
+          <br />
+          (<Empty description={false} />)
+        </>
+      )}
     </div>
   );
 }
