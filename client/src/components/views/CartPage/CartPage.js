@@ -65,11 +65,11 @@ function CartPage(props) {
       ) : (
         <>
           <br />
-          (<Empty description={false} />)
+          <Empty description={false} />
         </>
       )}
 
-      <Paypal />
+      {ShowTotal && <Paypal total={Total} />}
     </div>
   );
 }
