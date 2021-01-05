@@ -4,6 +4,7 @@ const { User } = require("../models/User");
 const { Product } = require("../models/Product");
 
 const { auth } = require("../middleware/auth");
+const { Payment } = require("../models/Payment");
 
 //=================================
 //             User
@@ -146,6 +147,27 @@ router.get("/removeFromCart", auth, (req, res) => {
         });
     }
   );
+});
+
+router.post("/successBuy", auth, (req, res) => {
+  // 1. User Collection 안에 History 필드 안에 간단한 결제정보 넣어주기
+  let history = [];
+  let transactionData = {};
+
+  req.body.cartDetail.forEach((item) => {
+    history.push({
+      dateOfPurchase: Date.now(),
+      name: item.title,
+      id: item._id,
+      price: item,
+      quantity: item.quantity,
+      PaymentId: req.body.PaymentData.PaymentID,
+    });
+  });
+
+  // 2. payment Collection 안에 자세한 결제 정보들 넣어주기
+
+  // 3. Product Collection 안에 있는 sold 필드 정보 업데이트 시켜주기
 });
 
 module.exports = router;
