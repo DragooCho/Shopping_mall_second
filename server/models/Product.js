@@ -22,7 +22,7 @@ const productSchema = mongoose.Schema(
       type: Array,
       default: [],
     },
-    soid: {
+    sold: {
       type: Number,
       maxlength: 100,
       default: 0,
