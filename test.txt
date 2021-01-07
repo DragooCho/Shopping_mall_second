@@ -72,6 +72,10 @@ git push origin master
 
 git push -f  
 
+rm -rf build 
+
+npm run build 
+
 
 
  
@@ -81,6 +85,22 @@ kill -9 28635
 
 npm install bcrypt@5.0.0 --save
 npm install antd@3.24.1 --save 
+
+
+
+1. cd client 해서  클라이언트 디렉토리로 가주세요 
+
+2. npm run build 해서  build파일 생성합니다. 
+
+3. npm install -g surge 로 surge를 설치합니다. 
+
+4.surge  -p build 를 해주시면 됩니다 ^^ 
+그러면  여기서 이메일이랑 비밀번호를 요구할거에요 ~ 그거는 알맞게 넣어주시면 됩니다. 
+
+그 후에는 도메인 을 줄거에요  그래서 거기로 접속하시면 됩니다 ~ !  수고하세요 ~ ! 
+
+
+ Published to      luxuriant-hat.surge.sh
 
 
 
