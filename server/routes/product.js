@@ -2,6 +2,33 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const { Product } = require("../models/Product");
+const aws = require("aws-sdk");
+const multerS3 = require("multer-s3");
+
+// const s3 = new aws.S3({
+//   accessKeyId: process.env.AWS_KEY,
+//   secretAccessKey: process.env.AWS_PRIVATE_KEY,
+//   region: "ap-northeast-1",
+// });
+
+// const storage = multer.diskStorage({
+//   storage: multerS3({
+//     s3,
+//     acl: "public-read",
+//     bucket: "uploads/",
+//   }),
+//   filename: function (req, file, cb) {
+//     cb(null, `${Date.now()}_${file.originalname}`);
+//   },
+// });
+
+// const upload = multer({
+//   storage: multerS3({
+//     s3,
+//     acl: "public-read",
+//     bucket: "uploads/",
+//   }),
+// }).single("file");
 
 //=================================
 //             Product
