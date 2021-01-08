@@ -27,7 +27,7 @@ git remote add origin https://github.com/DragooCho/Shopping_mall_site_production
 git push -u origin main
 
 git add .
-git commit -m "카트에 있는 모든 상품 지운 다음 처리할 것들"
+git commit -m "배포 준비"
 git push -u origin main
 
 
